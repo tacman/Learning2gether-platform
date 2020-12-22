@@ -19,7 +19,7 @@ use App\Entity\QuizQuestion;
 use App\Entity\QuizQuestionTranslation;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Persistence\ObjectManager;
 
 class LearningModuleFixture extends Fixture implements OrderedFixtureInterface
 {

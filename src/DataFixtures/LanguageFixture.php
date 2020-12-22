@@ -5,7 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\Language;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Persistence\ObjectManager;
 
 class LanguageFixture extends Fixture implements OrderedFixtureInterface
 {
@@ -18,10 +18,10 @@ class LanguageFixture extends Fixture implements OrderedFixtureInterface
     {
         $languages = [
             'en' => 'English',
-            'es' => 'Español',
-            'is' => 'Íslenska',
-            'fr' => 'Français',
-            'bg' => 'български'
+//            'es' => 'Español',
+//            'is' => 'Íslenska',
+//            'fr' => 'Français',
+//            'bg' => 'български'
         ];
 
         foreach ($languages AS $languageCode => $languageName) {

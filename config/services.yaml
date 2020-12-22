@@ -6,6 +6,8 @@
 parameters:
     uploads_directory: "%kernel.project_dir%/public/upload"
     public_directory: "%kernel.project_dir%/public"
+    bitbucket_username: '%env(BITBUCKET_USERNAME)%'
+    bitbucket_app_password: '%env(BITBUCKET_APP_PASSWORD)%'
 
 services:
     # default configuration for services in *this* file

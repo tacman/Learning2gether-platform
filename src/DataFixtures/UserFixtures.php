@@ -6,7 +6,7 @@ use App\Entity\Language;
 use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UserFixtures extends Fixture implements OrderedFixtureInterface
@@ -32,6 +32,13 @@ class UserFixtures extends Fixture implements OrderedFixtureInterface
         /** @var Language $english */
         $english = $manager->getRepository(Language::class)
             ->findOneBy(['code' => 'en']);
+
+        $user = new User();
+        $user->setPassword($this->passwordEncoder->encodePassword($user, 'tt'));
+        $user->setEmail('tt@survos.com');
+        $user->setName('TT');
+        $user->setUsername('Tac T');
+        $user->setLanguage($english);
 
         $user = new User();
         $user->setPassword($this->passwordEncoder->encodePassword($user, 'test123'));

@@ -24,6 +24,8 @@ class PortalController extends AbstractController
     public function index(Request $request): Response
 
     {
+
+
         if (isset($_GET['mode'])) {
             $mode = $_GET['mode'];
         } else {

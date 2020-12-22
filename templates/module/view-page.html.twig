@@ -19,7 +19,7 @@
 
 			<div class="ck-content">
 				<h1>{{ page.getTitle(language) | raw }}</h1>
-				{{ page.getContent(language) | raw }}
+				{{ page.getContent(language)|markdown | raw }}
 			</div>
 
 
