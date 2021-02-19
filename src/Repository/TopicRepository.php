@@ -5,7 +5,7 @@ namespace App\Repository;
 use App\Entity\Chapter;
 use App\Entity\Question;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ManagerRegistry;
 
 /**
  * @method Question|null find($id, $lockMode = null, $lockVersion = null)

@@ -8,6 +8,7 @@ use App\Domain\PageManager;
 use App\Entity\ChapterPage;
 use App\Entity\LearningModule;
 use App\Entity\User;
+use App\Repository\LearningModuleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,10 +19,11 @@ class ModuleController extends AbstractController
     use LanguageTrait;
 
     /**
-     * @Route("/portal/module/{module}", name="module", requirements={"module" = "\d+"})
+     * @Route("/portal/module/{id}", name="module", requirements={"id" = "\d+"})
      */
-    public function module(Request $request, LearningModule $module): Response
+    public function module(Request $request, $id, LearningModuleRepository $learningModuleRepository, LearningModule $module=null): Response
     {
+        $module = $learningModuleRepository->find($id);
         //user = logged in user
         /** @var User $user */
         $user = $this->getUser();
